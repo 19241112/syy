@@ -3,6 +3,10 @@
 <meta charset="utf-8">
 <title>HTML入門-フォームの作成</title>
 </head>
+
+<script>
+function Click_Sub(obj){obj.style.backgroundColor='#ffff00'}
+
 <body>
 <h1>シフト申告</h1>
 <!-- <form action="#" method="post"> -->
@@ -34,9 +38,7 @@
     </tr>
     <tr>
       <td>1</td>
-      <td>
-      <input type="button" value="黄色" onclick="changeBoxColor('#ffff00')">
-      </td>
+      <td><tr onclick="Click_Sub(this)"></td>
       <td></td>
       <td></td>
       <td></td>
@@ -500,3 +502,6 @@
   </table>
 </form>
 </body>
+
+</script>
+
