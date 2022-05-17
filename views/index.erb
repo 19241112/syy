@@ -516,6 +516,7 @@
       <td></td>
     </tr>
 
+    <form method="POST" action="example.cgi" onSubmit="return check()">
     <p>名前<br>
        <input type="text" name="name"></p>
     <p><input type="submit" value="送信"></p>
@@ -539,7 +540,6 @@
               window.alert('キャンセルされました'); // 警告ダイアログを表示
               return false; // 送信を中止
         }
-
      }
   </script>
   
