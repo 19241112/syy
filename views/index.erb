@@ -9,17 +9,6 @@
   
 <h1>シフト申告</h1>
 
-<script type="text/javascript">
-  var data = document.getElementById("data");
-data.onclick = function(evt){
-var target = evt.target || event.srcElement ;
-if( ( target.tagName || "" ).match(/td/i) ){
-target.style.backgroundColor =
-target.style.backgroundColor ? "" : "#ccc" ;
-}
-}
-</script>
-
   <table id="data" class="table" border="1">
     <tr>
       <th></th>
@@ -502,5 +491,21 @@ target.style.backgroundColor ? "" : "#ccc" ;
     <p><input type="submit" value="送信"></p>
     
   </table>
+
+<script type="text/javascript">
+/* テーブル要素取得 */
+var data = document.getElementById("data");
+/* クリックイベント */
+data.onclick = function(evt){
+// イベント発生源
+var target = evt.target || event.srcElement ;
+// 背景色を切り替える
+if( ( target.tagName || "" ).match(/td/i) ){
+target.style.backgroundColor =
+target.style.backgroundColor ? "" : "#ccc" ;
+}
+}
+</script>
+  
 </body>
 
