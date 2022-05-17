@@ -517,8 +517,10 @@
     </tr>
 
     <form form method="POST" action="example.cgi" onSubmit="return check()">
-    <p>名前<br>
-       <input type="text" name="name" required></p>
+    <p>名前（必須）<br>
+      <input type="text" name="name" required></p>
+    <p>備考欄<br>
+      <textarea name="comment" cols="30" rows="5"></textarea></p>
     <p><input type="submit" value="送信"></p>
     
   </table>
