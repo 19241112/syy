@@ -9,13 +9,18 @@
   
 <h1>シフト申告</h1>
 
- <script language="Javascript">
-function Click_Sub(obj) {
-    obj.style.backgroundColor='#cccccc'
+<script type="text/javascript">
+  var data = document.getElementById("data");
+data.onclick = function(evt){
+var target = evt.target || event.srcElement ;
+if( ( target.tagName || "" ).match(/td/i) ){
+target.style.backgroundColor =
+target.style.backgroundColor ? "" : "#ccc" ;
+}
 }
 </script>
 
-  <table border="1">
+  <table id="data" class="table" border="1">
     <tr>
       <th></th>
       <th>10-11</th>
@@ -33,7 +38,7 @@ function Click_Sub(obj) {
     </tr>
     <tr>
       <td>1</td>
-      <td onclick="Click_Sub(this)"></td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
