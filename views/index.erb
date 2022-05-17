@@ -9,14 +9,15 @@
   
 <h1>シフト申告</h1>
 
-<div class="td" id="target"></div>
-<script>
-  document.getElementById('target').addEventListener('click', () = =>{
-      document.getElementById('target').style.background = 'red'
-  })
-</script>
+$(function(){
+$("td").click(function(){
+ if($(this).css("background-color")=="rgba(0,0,0,0)"){
+$(this).css("background-color","red");
+} else {
+$(this).css("background-color","");}
+});
+});
 
-  
   <table border="1">
     <tr>
       <th></th>
