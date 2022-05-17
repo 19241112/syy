@@ -9,14 +9,16 @@
   
 <h1>シフト申告</h1>
 
-$(function(){
-$("td").click(function(){
+<script>
+ $(function(){
+ $("td").click(function(){
  if($(this).css("background-color")=="rgba(0,0,0,0)"){
-$(this).css("background-color","red");
-} else {
-$(this).css("background-color","");}
-});
-});
+ $(this).css("background-color","red");
+ } else {
+ $(this).css("background-color","");}
+ });
+ });
+  </script>
 
   <table border="1">
     <tr>
