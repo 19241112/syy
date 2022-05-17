@@ -6,7 +6,35 @@
 </head>
 
 <body>
-  
+
+<select name="year">
+<option value="jan">2022年</option>
+<option value="feb">2023年</option>
+<option value="mar">2024年</option>
+<option value="apr">2025年</option>
+<option value="may">2026年</option>
+<option value="jun">2027年</option>
+<option value="jul">2028年</option>
+<option value="aug">2029年</option>
+<option value="sep">2030年</option>
+<option value="oct">2031年</option>
+<option value="nov">2032年</option>
+</select>
+<select name="month">
+<option value="jan">1月</option>
+<option value="feb">2月</option>
+<option value="mar">3月</option>
+<option value="apr">4月</option>
+<option value="may">5月</option>
+<option value="jun">6月</option>
+<option value="jul">7月</option>
+<option value="aug">8月</option>
+<option value="sep">9月</option>
+<option value="oct">10月</option>
+<option value="nov">11月</option>
+<option value="dec">12月</option>
+</select>
+
 <h1>シフト申告</h1>
 
   <table id="data" class="table" border="1">
@@ -488,24 +516,22 @@
       <td></td>
     </tr>
 
+    <p>名前<br>
+       <input type="text" name="name"></p>
     <p><input type="submit" value="送信"></p>
     
   </table>
 
-<script type="text/javascript">
-/* テーブル要素取得 */
-var data = document.getElementById("data");
-/* クリックイベント */
-data.onclick = function(evt){
-// イベント発生源
-var target = evt.target || event.srcElement ;
-// 背景色を切り替える
-if( ( target.tagName || "" ).match(/td/i) ){
-target.style.backgroundColor =
-target.style.backgroundColor ? "" : "#ccc" ;
-}
-}
-</script>
+  <script type="text/javascript">
+    var data = document.getElementById("data");
+    data.onclick = function(evt){
+        var target = evt.target || event.srcElement ;
+        if( ( target.tagName || "" ).match(/td/i) ){
+              target.style.backgroundColor =
+              target.style.backgroundColor ? "" : "#ffff00" ;
+        }
+    }
+  </script>
   
 </body>
 
