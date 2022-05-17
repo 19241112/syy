@@ -9,16 +9,11 @@
   
 <h1>シフト申告</h1>
 
-<script>
- $(function(){
- $("td").click(function(){
- if($(this).css("background-color")=="rgba(0,0,0,0)"){
- $(this).css("background-color","red");
- } else {
- $(this).css("background-color","");}
- });
- });
-  </script>
+ <script language="Javascript">
+function Click_Sub(obj) {
+    obj.style.backgroundColor='#cccccc'
+}
+</script>
 
   <table border="1">
     <tr>
@@ -36,7 +31,7 @@
       <th>20-21</th>
       <th>21-22</th>
     </tr>
-    <tr>
+    <tr onclick="Click_Sub(this)">
       <td>1</td>
       <td></td>
       <td></td>
@@ -501,6 +496,6 @@
 
     <p><input type="submit" value="送信"></p>
     
-    </table>
+  </table>
 </body>
 
