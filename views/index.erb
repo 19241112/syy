@@ -7,17 +7,23 @@
 
 <body>
  
-  <h1>シフト申告書
-    <font-family:"monospace">
-  </h1>
+  <h1>シフト申告書</h1>
 
   <style>
     .box select{
         width: 150px;
         font-size: 20px;
     }
+    input.ex1{
+	width: 200px;
+    }
+    input,textarea{
+	bgColor:#D7EEFF;
+    }
   </style>
+  
   <div class="box">
+    
   <select class="year">
     <option value="jan">2022年</option>
     <option value="feb">2023年</option>
@@ -45,10 +51,11 @@
     <option value="nov">11月</option>
     <option value="dec">12月</option>
   </select>
+  
   </div>
 
-  <table id="data" class="table" border="1" >
-    <font face="monospace"></font>
+  <table id="data" class="table" border="1" >]
+    
     <tr bgcolor="#FFD5EC">
       <th></th>
       <th>10-11</th>
@@ -532,15 +539,14 @@
 
     <form form method="POST" action="example.cgi" onSubmit="return check()">
     <p>名前（必須）<br>
-      <input type="text" name="name" required>
-      <font-family:"sans-serif">
+      <input type="text" name="name" size="50" class="ex1" required>
     </p>
     <p>備考欄<br>
-      <textarea name="comment" cols="40" rows="10"></textarea>
-      <font face="monospace">
-      </font>
+      <textarea name="comment" cols="40" rows="10" class="ex2"></textarea>
     </p>
-    <p><input type="submit" value="送信"></p>
+    <p>
+      <input type="submit" value="送信">
+    </p>
     
   </table>
 
