@@ -8,7 +8,7 @@
 <body>
  
   <h1>シフト申告書
-    <font face="sans-serif">
+    <font face="monospace">
     </font>
   </h1>
 
@@ -16,11 +16,6 @@
     .box select{
         width: 150px;
         font-size: 20px;
-	.button input{
-	    width: 300px;
-	    padding: 20px;
-	    background: #FF8856;
-	}
     }
   </style>
   <div class="box">
@@ -539,7 +534,7 @@
     <form form method="POST" action="example.cgi" onSubmit="return check()">
     <p>名前（必須）<br>
       <input type="text" name="name" required>
-      <font face="monospace">
+      <font face="sans-serif">
       </font>
     </p>
     <p>備考欄<br>
@@ -547,7 +542,7 @@
       <font face="monospace">
       </font>
     </p>
-    <p><input type="submit" value="送信" class="button"></p>
+    <p><input type="submit" value="送信"></p>
     
   </table>
 
