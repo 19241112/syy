@@ -1,0 +1,11 @@
+development:
+  adapter: mysql2
+  database: users
+  host: localhost
+  username: root
+  password: naoko1128
+  encoding: utf8
+
+test:
+
+production:
