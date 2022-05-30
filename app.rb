@@ -1,15 +1,5 @@
 require 'sinatra'
-#require 'bundler'
-#Bundler.require
-#require 'rss'
 
-#ActiveRecord::Base.configurations = YAML.load_file('database.yml')
-#ActiveRecord::Base.establish_connection(:development)
-
-#class User <ActiveRecord::Base
-  #validates_presence_of :name
-  #validates_presence_of :url
-#end
 
 
 get '/' do
