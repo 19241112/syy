@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pg'
+require 'bundler/setup'
 db = 'postgres'
 host = 'localhost'
 user ='postgres'
