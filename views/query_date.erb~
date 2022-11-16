@@ -1,0 +1,19 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>日付指定画面</title>
+  </head>
+  <body>
+    <form form method="POST" action="/view_date" onSubmit="return check()"> 
+    <p><font size="4">年
+	<input type="text" name1="year" size="50" class="ex11" required>
+    </p>
+    <p><font size="4">月
+	<input type="text" name2="month" size="50" class="ex12" required>
+    </p>
+    
+    <p><input type="submit" value="送信" class="ex14">
+    </p>
+    </form>
+  </body>
+</html>

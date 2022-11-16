@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    <title>シフト申告書</title><br>
+    <title>提出側</title><br>
     <style>
       .box select{
           width: 150px;
@@ -10,18 +10,18 @@
       }
       .ex1 {
           width: 150px;
-          background-color:#D7EEFF;
+          background-color:#E4C0FF;
           border: 2px solid #DDDDDD;
           font-size: 20px;
       }
       textarea {
-          background-color:#D7EEFF;
+          background-color:#E4C0FF;
           border: 2px solid #DDDDDD;
           font-size: 20px;
       }
       .ex3 {
-          background-color:#8EB8FF;
-          border: 2px solid #8EB8FF;
+          background-color:#9830FF;
+          border: 2px solid #9830FF;
           border-radius: 30px;
           width: 90px;
           height: 50px;
@@ -35,555 +35,578 @@
   <body>
     
     <h1>シフト申告書</h1><br>
-    
-    <div class="box">
-      
-      <select class="year">
-	<option value="jan">2022年</option>
-	<option value="feb">2023年</option>
-	<option value="mar">2024年</option>
-	<option value="apr">2025年</option>
-	<option value="may">2026年</option>
-	<option value="jun">2027年</option>
-	<option value="jul">2028年</option>
-	<option value="aug">2029年</option>
-	<option value="sep">2030年</option>
-	<option value="oct">2031年</option>
-	<option value="nov">2032年</option>
-      </select>
-      <select class="month">
-	<option value="jan">1月</option>
-	<option value="feb">2月</option>
-	<option value="mar">3月</option>
-	<option value="apr">4月</option>
-	<option value="may">5月</option>
-	<option value="jun">6月</option>
-	<option value="jul">7月</option>
-	<option value="aug">8月</option>
-	<option value="sep">9月</option>
-	<option value="oct">10月</option>
-	<option value="nov">11月</option>
-	<option value="dec">12月</option>
-      </select>
-      
-    </div>
+    <form form method="POST" action="/recieve" onSubmit="return check()"> 
+      <div class="box">
+	
+	<select name="year" id="year" class="year">
+	  <option selected value="2022">2022年</option>
+	  <option value="2023">2023年</option>
+	  <option value="2024">2024年</option>
+	  <option value="2025">2025年</option>
+	  <option value="2026">2026年</option>
+	  <option value="2027">2027年</option>
+	  <option value="2028">2028年</option>
+	  <option value="2029">2029年</option>
+	  <option value="2030">2030年</option>
+	  <option value="2031">2031年</option>
+	  <option value="2032">2032年</option>
+	</select>
+	<select name="month" id="month" class="month">
+	  <option selected value="01">1月</option>
+	  <option value="02">2月</option>
+	  <option value="03">3月</option>
+	  <option value="04">4月</option>
+	  <option value="05">5月</option>
+	  <option value="06">6月</option>
+	  <option value="07">7月</option>
+	  <option value="08">8月</option>
+	  <option value="09">9月</option>
+	  <option value="10">10月</option>
+	  <option value="11">11月</option>
+	  <option value="12">12月</option>
+	</select>
+	
+      </div>
 
-    <table id="data" class="table1" border="1" >
-      
-      <tr bgcolor="#FFD5EC">
-	<th></th>
-	<th>10-11</th>
-	<th>11-12</th>
-	<th>12-13</th>
-	<th>13-14</th>
-	<th>14-15</th>
-	<th>15-16</th>
-	<th>16-17</th>
-	<th>17-18</th>
-	<th>18-19</th>
-	<th>19-20</th>
-	<th>20-21</th>
-	<th>21-22</th>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">1</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">2</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">3</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">4</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">5</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">6</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">7</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">8</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">9</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">10</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">11</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">12</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">13</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">14</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">15</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">16</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">17</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">18</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">19</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">20</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">21</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">22</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">23</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">24</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">25</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">26</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">27</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">28</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">29</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">30</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
-      <tr>
-	<td bgcolor="#FFD5EC">31</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-      </tr>
+      <table id="data" class="table1" border="1" >
+	
+	<tr bgcolor="#FFD5EC">
+	  <th></th>
+	  <th>10-11</th>
+	  <th>11-12</th>
+	  <th>12-13</th>
+	  <th>13-14</th>
+	  <th>14-15</th>
+	  <th>15-16</th>
+	  <th>16-17</th>
+	  <th>17-18</th>
+	  <th>18-19</th>
+	  <th>19-20</th>
+	  <th>20-21</th>
+	  <th>21-22</th>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">1</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">2</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">3</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">4</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">5</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">6</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">7</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">8</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">9</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">10</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">11</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">12</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">13</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">14</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">15</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">16</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">17</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">18</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">19</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">20</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">21</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">22</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">23</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">24</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">25</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">26</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">27</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">28</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">29</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">30</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <th bgcolor="#FFD5EC">31</th>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>
 
-      <form form method="POST" action="/recieve" onSubmit="return check()">
+	
 	<p><font size="4">名前（必須）<br>
 	    <input type="text" name="name" size="50" class="ex1" required>
 	</p>
 	<p><font size="4">備考欄<br>
 	    <textarea name="comment" cols="40" rows="10" class="ex2"></textarea>
 	</p>
+	<p><input type="hidden" name="time" value="karubi" id="time"></p>
 	<br>
 	<p>＊希望する時間帯を全て選択してください</p>
 	
-    </table>
-    <br><br>
-    <p><input type="submit" value="送信" class="ex3"></p><br><br><br><br>
-
-    <script type="text/javascript">
-      var data = document.getElementById("data");
-      data.onclick = function(evt){
-          var target = evt.target || event.srcElement ;
-          if( ( target.tagName || "" ).match(/td/i) ){
-              target.style.backgroundColor =
-		  target.style.backgroundColor ? "" : "#ffff00" ;
-          }
-      }
-      function check(){
-          if(window.confirm('送信してよろしいですか？')){ // 確認ダイアログを表示
-              return true; // 「OK」時は送信を実行
-          }
-          else{ // 「キャンセル」時の処理
-              window.alert('キャンセルされました'); // 警告ダイアログを表示
-              return false; // 送信を中止
-          }
-      }
-    </script>
+      </table>
+      <br><br>
+      <p><input type="submit" value="送信" class="ex3"></p><br><br><br><br>
     
+
+      <script type="text/javascript">
+	window.onload = function(){
+	    let elements = document.querySelectorAll('#data td');
+	    for (const [i, e] of elements.entries()) {
+		e.id = `,${i}`;
+	    }
+	    console.log(elements);
+	}
+	
+	/* テーブル要素取得 */
+	var data = document.getElementById("data");
+	var time = document.getElementById("time");
+	/* クリックイベント */
+	data.onclick = function(evt){
+	    // イベント発生源
+	    var target = evt.target || event.srcElement ;
+	    // 背景色を切り替える
+	    if( ( target.tagName || "" ).match(/td/i) ){
+		target.style.backgroundColor =
+		    target.style.backgroundColor ? "" : "#F3FF83" ;
+	    }
+	    time.value = ""
+	    for (var i = 0; i < 372; i++) {
+		if (document.getElementById(","+i).style.backgroundColor != "") { // ","+i  ','+i
+		    time.value += (','+i)
+		}
+	    }
+            console.log(time.value);
+	    
+	    function check(){
+		if(window.confirm('送信してよろしいですか？')){ // 確認ダイアログを表示
+		    return true; // 「OK」時は送信を実行
+		}
+		else{ // 「キャンセル」時の処理
+		    window.alert('キャンセルされました'); // 警告ダイアログを表示
+		    return false; // 送信を中止
+		}
+	    }
+	}
+      </script>
+    </form>
   </body>
 

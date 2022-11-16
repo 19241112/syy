@@ -1,0 +1,6 @@
+<html lang="ja">
+  <body>
+<% @name
+  </body>
+  
+</html>

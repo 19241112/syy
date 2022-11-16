@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>管理者側</title>
+  </head>
+  <body>
+    <br><h1>シフト一覧表</h1><br>
+    <a href="/recieve/view_log/<%= @r2 %>/<%= @r1 %>">前の月</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="/recieve/view_log/<%= @n2 %>/<%= @n1 %>">次の月</a>
+    <%= @tables %>
+    <script type="text/javascript">
+      function bgSwap(TD) {
+	  if(TD.style && TD.style.backgroundColor)
+	      TD.style.backgroundColor = '';
+	  else
+	      TD.style.backgroundColor = '#ff0000';
+      }
+    </script>
+  </body>
+</html>
+

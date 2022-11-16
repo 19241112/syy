@@ -1,0 +1,17 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>データ一覧</title>
+  </head>
+  <body>
+    <form>
+      <table>
+    <% @name.each do |name| %>
+    <%= "name" %>
+    <% end %>
+    </table>
+    </form>
+  </body>
+  <script>
+  </script>
+</html>
