@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get '/' do
+get '/hello' do
   'Hello World!'
 end
