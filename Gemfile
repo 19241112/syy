@@ -8,6 +8,6 @@ gem 'thin'
 gem 'sinatra-contrib'
 gem 'pg'
 # herokuで使うとき
-# gem 'puma'
+ gem 'puma'
 
 
