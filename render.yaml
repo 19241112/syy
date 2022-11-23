@@ -10,8 +10,8 @@ services:
     env: ruby
     region: singapore
     plan: free
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    buildCommand: "render-build.sh"
+    startCommand: "bundle exec ruby.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
