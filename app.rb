@@ -1,8 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pg'
-#require 'bundler/setup'
-#require 'puma'
 db = 'postgres'
 host = 'localhost'
 user ='postgres'
@@ -27,8 +25,6 @@ post '/recieve' do
     x = i%12+10
     y = (i-x+22)/12
     result = conn.exec_params("INSERT INTO mydb (dt,name,comment,time) VALUES ('#{year}-#{month}-#{y}','#{name}','#{comment}','#{x}');")
-    #result = conn.exec_params("select * from mydb WHERE dt>'2022-10-01';") 
-    #p result.values
   end
   erb :recieve
 end
