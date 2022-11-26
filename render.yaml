@@ -1,17 +1,17 @@
 databases:
-  - name: 
-    databaseName: 
-    user: 
+  - name: render_app
+    databaseName:render_app_0l3u
+    user:syy
     region: singapore
 
 services:
   - type: web
-    name: rails7-sample-staging
+    name: render_app
     env: ruby
     region: singapore
     plan: free
     buildCommand: "render-build.sh"
-    startCommand: "bundle exec ruby hello.rb"
+    startCommand: "bundle exec ruby app.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:

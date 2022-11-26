@@ -1,10 +1,14 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pg'
-db = 'postgres'
-host = 'localhost'
-user ='postgres'
-password = 'naoko1128'
+#db = 'postgres'
+db = 'render_app_0l3u'
+#host = 'localhost'
+host = 'dpg-cduoqko2i3mkk8a7sp80-a'
+#user ='postgres'
+user = 'syy'
+#password = 'naoko1128'
+password = '0uOYkDtjXOLD1LkVVcShZcPUd9nlx0I9'
 port = 5432
 conn = PG::Connection.new(host: host, port: port, dbname: db, user: user, password: password)
 
