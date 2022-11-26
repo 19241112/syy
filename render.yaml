@@ -1,5 +1,5 @@
 databases:
-  - name: render_app
+  - name: render_app_app_0l3u
     databaseName:render_app_0l3u
     user:syy
     region: singapore
