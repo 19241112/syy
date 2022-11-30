@@ -12,7 +12,7 @@ password = '0uOYkDtjXOLD1LkVVcShZcPUd9nlx0I9'
 port = 5432
 conn = PG::Connection.new(host: host, port: port, dbname: db, user: user, password: password)
 sql = <<EOS
-drop table mydb
+drop table mydb;
 CREATE TABLE public.mydb (
               number serial,
               name text,
