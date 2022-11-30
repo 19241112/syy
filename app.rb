@@ -11,8 +11,8 @@ user = 'syy'
 password = '0uOYkDtjXOLD1LkVVcShZcPUd9nlx0I9'
 port = 5432
 conn = PG::Connection.new(host: host, port: port, dbname: db, user: user, password: password)
+conn.exec("drop table mydb")
 sql = <<EOS
-drop table mydb;
 CREATE TABLE public.mydb (
               number serial,
               name text,
@@ -174,7 +174,7 @@ get '/recieve/view_log/:year/:month' do
     n1 = "#{m+1}"
     r2 = y
     n2 = y
-  elsif m=0
+  elsif m==0
     r1 = 0
     n1 = 0
     r2 = 0
