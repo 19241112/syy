@@ -11,7 +11,7 @@ user = 'syy'
 password = '0uOYkDtjXOLD1LkVVcShZcPUd9nlx0I9'
 port = 5432
 conn = PG::Connection.new(host: host, port: port, dbname: db, user: user, password: password)
-sql = << EOS
+sql = <<EOS
 CREATE TABLE public.mydb (
               number integer NOT NULL,
               name text,
@@ -20,7 +20,6 @@ CREATE TABLE public.mydb (
               dt date,
               "time" integer
              );
-         
 EOS
 conn.exec(sql)
 #提出側
