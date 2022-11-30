@@ -11,7 +11,18 @@ user = 'syy'
 password = '0uOYkDtjXOLD1LkVVcShZcPUd9nlx0I9'
 port = 5432
 conn = PG::Connection.new(host: host, port: port, dbname: db, user: user, password: password)
-
+sql = << EOS
+CREATE TABLE public.mydb (
+              number integer NOT NULL,
+              name text,
+              comment text,
+              nowtime timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+              dt date,
+              "time" integer
+             );
+         
+EOS
+conn.exec(sql)
 #提出側
 get '/' do
   erb :index
